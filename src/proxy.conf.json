@@ -1,0 +1,10 @@
+{
+    "localhost:4201/*":{
+        "target":"http://localhost:3300",
+          "secure":false,
+          "changeOrigin": true,
+          "pathRewrite": { "^/http://localhost:3300": "" },
+          "levellog": "debug"
+           
+}
+}

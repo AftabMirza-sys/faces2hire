@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import'src/dist/css/style.min.css';
+@import'src/styles.css';
+@import'src/assets/libs/bootstrap/dist/css/bootstrap.css';
+@import'src/assets/libs/bootstrap/dist/css/bootstrap.min.css';

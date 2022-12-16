@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Faces2HireLogin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<style >
+        body
+        { border:1px solid black;
+            background-image:url("../assets/images/back.jpeg");
+            background-size: cover;
+            height:650px;
+            background-repeat: no-repeat;
+            
+        }
+      #forget
+{
+margin:0px auto;
+padding: 20px;
+
+}
+#maindiv
+{
+border: 0px solid white;
+width: 30%;
+margin-left:1%;
+margin-top: 200px;
+color: white;
+height: 0px auto;
+text-align: center;
+}
+h1{color:white;}
+#email
+{
+    border:1px solid white;
+    border-radius: 5px;
+    margin: 0px auto;
+    color:white;
+    background-color: transparent;
+    margin-bottom:10px;
+    width:60%;
+}
+#submit
+{
+    border:1px solid white;
+    border-radius: 5px;
+    margin: 0px auto;
+    color:white;
+    background-color: transparent;
+    margin-bottom:10px;
+    width:40%;
+}
+#submit:hover
+{
+    background-color: #24a0ed ;
+}
+#radio1
+{
+    font-size:13px;
+    
+}
+
+
+@media screen and (max-width: 992px) {
+    body
+        {
+            background-image:url("../assets/images/back.jpeg");
+            background-size: cover;
+            height:650px;
+            background-repeat: no-repeat;
+            
+        }
+#maindiv
+{
+border:0px solid white;
+width: 80%;
+margin-left:1%;
+margin-top: 200px;
+color: white;
+height: 0px auto;
+text-align: center;
+}
+h1{color:white;}
+#email
+{
+    border:1px solid white;
+    border-radius: 5px;
+    margin: 0px auto;
+    color:white;
+    background-color: transparent;
+    margin-bottom:10px;
+    width:60%;
+}
+
+#submit
+{
+    border:1px solid white;
+    border-radius: 5px;
+    margin: 0px auto;
+    color:white;
+    background-color: transparent;
+    margin-bottom:10px;
+    width:40%;
+}
+#submit:hover
+{
+    background-color: blue;
+}
+a
+{
+    margin-top: 20px;
+    padding-left: 50px;
+}
+}
+
+
+
+    </style>
+
+	</head>
+	<body >
+
+        <div id="maindiv">
+<h1>Faces2Hire Login</h1>
+<div class="alert alert-danger" *ngIf="status == false"  >{{message}} </div>
+<form #loginuserdata ="ngForm"(ngSubmit)="onsubmit(loginuserdata.value)">
+<input type="text" ngModel name="email" class="form-control" placeholder="Email" id="email">
+
+<input type="password"  name="password" ngModel class="form-control" placeholder="Password" id="email">
+
+<label for="select">Select Your Account Type</label>
+<select ngModel  name="account" class="form-control"  style="background-color:transparent; width:50%; margin:0px auto;" >
+    <option value="jobseeker">Jobseeker</option>
+    <option value="employer">Employer</option>
+    <option value="">Please Select Account Type</option>
+   
+</select>
+  
+  <br>
+  <input type="submit" value="Login" class="btn btn-primary mt-3" id="submit"><br>
+  <a href="forgotpassword" id="forget">Forgot Password?</a>
+<a href="signup" id="forget">Not A Member?</a>
+</form>
+        </div>
+
+	</body>
+</html>
+
