@@ -92,7 +92,7 @@ public ngOnInit()
 
 getpreferences(): void {
   let tmp :any= [];
-  this.http.get<any>('http://localhost:3300/lookup/getLookupByType/employmentPreferences').subscribe(data => {
+  this.http.get<any>(environment.baseUrl+'/lookup/getLookupByType/employmentPreferences').subscribe(data => {
   
     for(let i=0; i < data.data.length; i++) {
       tmp.push({ item_id: data.data[i]._id, item_text: data.data[i].lookupName });
@@ -114,7 +114,7 @@ getpreferences(): void {
 
 getjobseekerindustry(): void {
   let tmp :any= [];
-  let url:any  = "http://localhost:3300/industry/getIndustryByType/IndustryType "+this.userid;
+  let url:any  = environment.baseUrl+"/industry/getIndustryByType/IndustryType "+this.userid;
   this.http.get<any>(url).subscribe(jobseekerindustry => {
     console.log(jobseekerindustry);    
     for(let i=0; i < jobseekerindustry.length; i++) {
